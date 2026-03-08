@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🛒 Cart - Divine Deserts - Coimbatore</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body class="cart-page">
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">Divine Deserts</div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#menu">Menu</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="cart-container">
+        <div class="cart-header">
+            <h1>🛒 Shopping Cart</h1>
+            <button class="back-home" onclick="window.location.href='index.html#menu'">
+                ← Continue Shopping
+            </button>
+        </div>
+
+        <!-- LIST OF ITEMS (JS fills this) -->
+        <div id="cartItems"></div>
+
+        <!-- EMPTY MESSAGE (shown when cart.length === 0) -->
+        <div id="cartEmptyMsg" style="display:none; text-align:center; padding:3rem;">
+            <h3>Your cart is empty 🛒</h3>
+            <p><a href="index.html#menu">Start shopping →</a></p>
+        </div>
+
+        <!-- FOOTER WITH TOTAL (JS shows/hides this) -->
+        <div id="cartFooter" style="display:none;">
+            <div class="cart-summary">
+                <h3>Total Items: <span id="cartItemCount">0</span></h3>
+                <h2>₹<span id="cartTotalPrice">0</span></h2>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">
+                CHECKOUT VIA WHATSAPP
+            </button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</body>
+</html>
