@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Login - Divine Desserts</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body class="admin-page">
+    <main class="admin-shell">
+        <section class="admin-login" id="adminLoginView">
+            <div class="admin-card admin-login-card">
+                <p class="eyebrow">Divine Desserts</p>
+                <h1>Staff Login</h1>
+                <p class="admin-copy">Sign in to update menu items, prices, stock, discounts, and photos.</p>
+                <form id="staffLoginForm" class="admin-form-stack">
+                    <label>
+                        Email
+                        <input type="email" id="staffUsername" placeholder="Enter admin email" required>
+                    </label>
+                    <label>
+                        Password
+                        <input type="password" id="staffPassword" placeholder="Enter password" required>
+                    </label>
+                    <button type="submit" class="admin-primary-btn">Sign In</button>
+                    <p id="loginMessage" class="admin-message"></p>
+                </form>
+                <a href="index.html" class="admin-back-link">Back to storefront</a>
+            </div>
+        </section>
+
+        <section class="admin-dashboard hidden" id="adminDashboardView">
+            <div class="admin-topbar admin-card">
+                <div>
+                    <p class="eyebrow">Staff Panel</p>
+                    <h1>Manage Menu</h1>
+                    <p class="admin-copy">Use this page to add new items and edit existing ones without touching code.</p>
+                </div>
+                <div class="admin-topbar-actions">
+                    <button id="resetMenuBtn" class="admin-secondary-btn" type="button">Reset to Default Menu</button>
+                    <button id="logoutBtn" class="admin-primary-btn" type="button">Log Out</button>
+                </div>
+            </div>
+
+            <section class="admin-workflow admin-card">
+                <div class="admin-workflow-step">
+                    <p class="eyebrow">Step 1</p>
+                    <h2>Add New Item</h2>
+                    <p>Fill the form and press Add Item.</p>
+                </div>
+                <div class="admin-workflow-step">
+                    <p class="eyebrow">Step 2</p>
+                    <h2>Edit Existing Items</h2>
+                    <p>Use the buttons on the right to edit, stock on/off, or delete.</p>
+                </div>
+            </section>
+
+            <div class="admin-grid">
+                <section class="admin-card">
+                    <div class="admin-section-header">
+                        <div>
+                            <p class="eyebrow">Add New Item</p>
+                            <h2 id="editorTitle">Create Product</h2>
+                            <p class="admin-mode-note" id="editorModeLabel">Use this form to add a new product.</p>
+                        </div>
+                        <button id="cancelEditBtn" class="admin-text-btn hidden" type="button">Stop Editing</button>
+                    </div>
+
+                    <form id="productForm" class="admin-form-grid">
+                        <input type="hidden" id="productId">
+                        <label>
+                            Item Name
+                            <input type="text" id="productName" placeholder="Ex: Mango Cheesecake" required>
+                        </label>
+                        <label>
+                            Category
+                            <input type="text" id="productCategory" placeholder="Ex: Cakes" required>
+                        </label>
+                        <label>
+                            Price (leave 0 for quote-only item)
+                            <input type="number" id="productPrice" min="0" step="0.01" value="0" required>
+                        </label>
+                        <label>
+                            Unit
+                            <input type="text" id="productUnit" placeholder="Ex: /500g or /piece">
+                        </label>
+                        <label>
+                            Discount %
+                            <input type="number" id="productDiscount" min="0" max="100" step="1" value="0">
+                        </label>
+                        <label>
+                            Sort Order
+                            <input type="number" id="productSortOrder" min="0" step="1" value="0">
+                        </label>
+                        <label class="admin-checkbox">
+                            <input type="checkbox" id="productQuoteOnly">
+                            Quote only item
+                        </label>
+                        <label class="admin-checkbox">
+                            <input type="checkbox" id="productInStock" checked>
+                            In stock
+                        </label>
+                        <label class="admin-upload">
+                            Product Image
+                            <input type="file" id="productImage" accept="image/*">
+                            <span class="admin-upload-note">Upload a photo from this device. It will be sent to Supabase Storage.</span>
+                        </label>
+                        <div class="admin-preview" id="imagePreviewBox">
+                            <span>No image selected</span>
+                        </div>
+                        <label class="admin-field-span">
+                            Image URL fallback
+                            <input type="text" id="productImageUrl" placeholder="Paste an existing image URL if needed">
+                        </label>
+                        <button type="submit" id="saveProductBtn" class="admin-primary-btn admin-field-span">Add Item</button>
+                        <p id="productMessage" class="admin-message admin-field-span"></p>
+                    </form>
+                </section>
+
+                <section class="admin-card">
+                    <div class="admin-section-header">
+                        <div>
+                            <p class="eyebrow">Edit Existing Items</p>
+                            <h2>Current Menu Items</h2>
+                            <p class="admin-mode-note">Pick any item below to edit or manage stock.</p>
+                        </div>
+                        <p class="admin-count" id="productCountLabel">0 items</p>
+                    </div>
+                    <div id="adminProductList" class="admin-product-list"></div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="supabase-client.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

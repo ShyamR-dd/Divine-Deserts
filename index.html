@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Divine Deserts - Coimbatore</title>
-    <link rel="stylesheet" href="./styles.css">
+    <title>Divine Desserts - Coimbatore</title>
+    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <h2>Divine Deserts</h2>
+            <h2>Divine Desserts</h2>
             <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#menu">Menu</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#about">Contact</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="hamburger">
                 <span></span><span></span><span></span>
@@ -26,254 +26,55 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Fresh Cloud Kitchen Bakes</h1>
-            <p>Handcrafted cakes, ice creams & spreads delivered across Coimbatore</p>
+            <p>Handcrafted cakes, ice creams and spreads delivered across Coimbatore</p>
             <div style="margin-top: 2rem; margin-bottom: 4rem;">
                 <a href="#menu" class="cta-btn">Browse Menu</a>
             </div>
         </div>
-
     </section>
 
     <section id="menu" class="menu">
         <h2 class="section-title">Our Complete Menu</h2>
-        <div class="menu-grid">
-            <!-- Cakes -->
-            <div class="menu-item">
-                <img src="cheesecake.jpg" alt="Cheese Cake">
-                <h3>Cheese Cake</h3>
-                <p>₹450/kg</p>
-                <div class="quantity-controls">
-                    <button class="qty-minus">-</button>
-                    <span class="qty-display">0</span>
-                    <button class="qty-plus">+</button>
-                </div>
-                <button class="add-cart">Add to Cart</button>
-            </div>
+        <div class="menu-grid" id="menuGrid"></div>
+    </section>
 
-            <div class="menu-item">
-                <img src="cupcakes.jpg" alt="Cup Cakes & Muffins">
-                <h3>Cup Cakes & Muffins</h3>
-                <p>₹50/piece</p>
-                <div class="quantity-controls">
-                    <button class="qty-minus">-</button>
-                    <span class="qty-display">0</span>
-                    <button class="qty-plus">+</button>
+    <section id="about" class="about">
+        <h2 class="section-title">About Divine Desserts</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Made in a clean home kitchen in Coimbatore. Every dessert starts with fresh ingredients and your smile in mind.</p>
+                <p><strong>Why choose us?</strong></p>
+                <div class="about-features">
+                    <div>Freshly baked daily from scratch</div>
+                    <div>No preservatives or store-bought mixes</div>
+                    <div>Custom orders for birthdays and celebrations</div>
+                    <div>Hygienic cloud kitchen standards</div>
+                    <div>Affordable prices, premium taste</div>
+                    <div>Fast delivery across Coimbatore</div>
                 </div>
-                <button class="add-cart">Add to Cart</button>
-            </div>
-
-            <div class="menu-item">
-                <img src="blackforest.jpg" alt="Black Forest">
-                <h3>Black Forest</h3>
-                <p>₹500/kg</p>
-                <div class="quantity-controls">
-                    <button class="qty-minus">-</button>
-                    <span class="qty-display">0</span>
-                    <button class="qty-plus">+</button>
-                </div>
-                <button class="add-cart">Add to Cart</button>
-            </div>
-
-            <div class="menu-item">
-                <img src="chocolatecake.jpg" alt="Chocolate Cake">
-                <h3>Chocolate Cake</h3>
-                <p>₹450/kg</p>
-                <div class="quantity-controls">
-                    <button class="qty-minus">-</button>
-                    <span class="qty-display">0</span>
-                    <button class="qty-plus">+</button>
-                </div>
-                <button class="add-cart">Add to Cart</button>
-            </div>
-
-            <div class="menu-item">
-                <img src="redvelvet.jpg" alt="Red Velvet Cake">
-                <h3>Red Velvet Cake</h3>
-                <p>₹550/kg</p>
-                <div class="quantity-controls">
-                    <button class="qty-minus">-</button>
-                    <span class="qty-display">0</span>
-                    <button class="qty-plus">+</button>
-                </div>
-                <button class="add-cart">Add to Cart</button>
-            </div>
-
-            <div class="menu-item">
-                <img src="vanilla.jpg" alt="Vanilla Cake">
-                <h3>Vanilla Cake</h3>
-                <p>₹400/kg</p>
-                <div class="quantity-controls">
-                    <button class="qty-minus">-</button>
-                    <span class="qty-display">0</span>
-                    <button class="qty-plus">+</button>
-                </div>
-                <button class="add-cart">Add to Cart</button>
-            </div>
-
-            <div class="menu-item">
-                <img src="brownies.jpg" alt="Brownies">
-                <h3>Brownies</h3>
-                <p>₹300/400g</p>
-                <div class="quantity-controls">
-                    <button class="qty-minus">-</button>
-                    <span class="qty-display">0</span>
-                    <button class="qty-plus">+</button>
-                </div>
-                <button class="add-cart">Add to Cart</button>
-            </div>
-
-            <!-- New: Korean Cheese Bun & Donuts -->
-            <div class="menu-item">
-                <img src="korean-cheesebun.jpg" alt="Korean Cheese Bun">
-                <h3>Korean Cheese Bun</h3>
-                <p>₹60/piece</p>
-                <div class="quantity-controls">
-                    <button class="qty-minus">-</button>
-                    <span class="qty-display">0</span>
-                    <button class="qty-plus">+</button>
-                </div>
-                <button class="add-cart">Add to Cart</button>
-            </div>
-
-            <div class="menu-item">
-                <img src="donuts.jpg" alt="Donuts">
-                <h3>Donuts</h3>
-                <p>₹40/piece</p>
-                <div class="quantity-controls">
-                    <button class="qty-minus">-</button>
-                    <span class="qty-display">0</span>
-                    <button class="qty-plus">+</button>
-                </div>
-                <button class="add-cart">Add to Cart</button>
-            </div>
-
-            <div class="menu-item">
-                <img src="customcake.jpg" alt="Custom Cakes">
-                <h3>Custom Cakes</h3>
-                <p>Price on request</p>
-                <div class="quantity-controls">
-                    <button class="qty-minus">-</button>
-                    <span class="qty-display">0</span>
-                    <button class="qty-plus">+</button>
-                </div>
-                <button class="add-cart">Request Quote</button>
-            </div>
-
-            <!-- Ice creams -->
-            <div class="menu-item">
-                <img src="vanillaice.jpg" alt="Vanilla Chocolate Ice Cream">
-                <h3>Vanilla Chocolate Ice Cream</h3>
-                <p>₹200/500ml</p>
-                <div class="quantity-controls">
-                    <button class="qty-minus">-</button>
-                    <span class="qty-display">0</span>
-                    <button class="qty-plus">+</button>
-                </div>
-                <button class="add-cart">Add to Cart</button>
-            </div>
-
-            <div class="menu-item">
-                <img src="deathbychoc.jpg" alt="Death by Chocolate">
-                <h3>Death by Chocolate</h3>
-                <p>₹250/500ml</p>
-                <div class="quantity-controls">
-                    <button class="qty-minus">-</button>
-                    <span class="qty-display">0</span>
-                    <button class="qty-plus">+</button>
-                </div>
-                <button class="add-cart">Add to Cart</button>
-            </div>
-
-            <!-- Spreads -->
-            <div class="menu-item">
-                <img src="chochazelnut.jpg" alt="Chocolate Hazelnut Butter">
-                <h3>Chocolate Hazelnut Butter</h3>
-                <p>₹250/250g</p>
-                <div class="quantity-controls">
-                    <button class="qty-minus">-</button>
-                    <span class="qty-display">0</span>
-                    <button class="qty-plus">+</button>
-                </div>
-                <button class="add-cart">Add to Cart</button>
-            </div>
-
-            <div class="menu-item">
-                <img src="cashewchoc.jpg" alt="Cashew Chocolate Butter">
-                <h3>Cashew Chocolate Butter</h3>
-                <p>₹220/250g</p>
-                <div class="quantity-controls">
-                    <button class="qty-minus">-</button>
-                    <span class="qty-display">0</span>
-                    <button class="qty-plus">+</button>
-                </div>
-                <button class="add-cart">Add to Cart</button>
-            </div>
-
-            <div class="menu-item">
-                <img src="peanutbutter.jpg" alt="Peanut Butter">
-                <h3>Peanut Butter</h3>
-                <p>₹180/250g</p>
-                <div class="quantity-controls">
-                    <button class="qty-minus">-</button>
-                    <span class="qty-display">0</span>
-                    <button class="qty-plus">+</button>
-                </div>
-                <button class="add-cart">Add to Cart</button>
-            </div>
-
-            <!-- Biscuits -->
-            <div class="menu-item">
-                <img src="Osmania.jpg" alt="Osmania Biscuits">
-                <h3>Osmania Biscuits</h3>
-                <p>₹150/200g</p>
-                <div class="quantity-controls">
-                    <button class="qty-minus">-</button>
-                    <span class="qty-display">0</span>
-                    <button class="qty-plus">+</button>
-                </div>
-                <button class="add-cart">Add to Cart</button>
             </div>
         </div>
     </section>
 
-    <section id="about" class="about">
-            <h2 class="section-title">About Divine Deserts</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Made in a clean home kitchen in Coimbatore. Every desert starts with fresh ingredients and your smile in mind.</p>
-                    <p><strong>Why choose us?</strong></p>
-                    <div class="about-features">  <!-- NEW CLASS -->
-                        <div>Freshly baked daily from scratch</div>
-                        <div>No preservatives or store-bought mixes</div>
-                        <div>Custom orders for birthdays & celebrations</div>
-                        <div>Hygienic cloud kitchen standards</div>
-                        <div>Affordable prices, premium taste</div>
-                        <div>Fast delivery across Coimbatore</div>
-                    </div>
-                   
-                </div>
-            </div>
-    </section>
-
     <section id="contact" class="contact">
-        <h2 class="section-title">Contact Divine Deserts</h2>
+        <h2 class="section-title">Contact Divine Desserts</h2>
         <div class="contact-content">
             <div class="contact-item">
-                <div class="contact-icon">📱</div>
+                <div class="contact-icon">Phone</div>
                 <h3>+91 99440 77908</h3>
                 <p>WhatsApp Orders</p>
             </div>
             <div class="contact-item">
-                <div class="contact-icon">✉️</div>
-                <h3>rajhamsi@gmail.com</h3>
-                <p>Inquiries & Custom Orders</p>
+                <div class="contact-icon">Email</div>
+                <h3>divinedeserts2026@gmail.com</h3>
+                <p>Inquiries and custom orders</p>
             </div>
         </div>
     </section>
 
-
-    <script src="./script.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="supabase-client.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-
